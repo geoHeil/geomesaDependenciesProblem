@@ -27,10 +27,12 @@ How can this be fixed? What are suitable/sensible exclusion rules?
 
 I believe it is fine that geomesa is contained in the fat jar, but existing dependenies could maybe be removed? However, from the documentation I know that geomesa is sometimes requiring more up to date libraries (in particular kryo) so I am unsure what settings to choose here.
 
-In particular, I am concearned about:
+In particular, I am concerned about:
 - kryo
 - org.apache.hadoop:*
 - org.apache.orc
 - various XML and JSON parsers (which are not shaded)
 
 Would you suggest shading? If so which libraries should be shaded?
+
+See https://github.com/geoHeil/geomesaDependenciesProblem for details
