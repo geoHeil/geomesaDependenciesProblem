@@ -91,13 +91,14 @@ BUILD SUCCESSFUL in 0s
 
 ```
 
-adding 
+adding an exclusion rule
 ```
 compile("org.locationtech.geomesa:geomesa-spark-sql_2.11:2.0.1") {
-        exclude group: 'xerces', module: 'xerces-impl'
+        exclude group: 'xerces', module: 'xercesImpl'
     }
 ```
-only seems to remove hadoop and not xerces from the jar. weird.
+fixes the problem - but I am unsure if this (i.e. the more current version at runtime) will break geotools.
+
 ## link
 
 See https://github.com/geoHeil/geomesaDependenciesProblem for details
