@@ -90,6 +90,14 @@ BUILD SUCCESSFUL in 0s
 1 actionable task: 1 executed
 
 ```
+
+adding 
+```
+compile("org.locationtech.geomesa:geomesa-spark-sql_2.11:2.0.1") {
+        exclude group: 'xerces', module: 'xerces-impl'
+    }
+```
+only seems to remove hadoop and not xerces from the jar. weird.
 ## link
 
 See https://github.com/geoHeil/geomesaDependenciesProblem for details
